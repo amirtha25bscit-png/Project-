@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Popup Page</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+    }
+
+    /* Main page content */
+    .content{
+        text-align:center;
+        margin-top:150px;
+    }
+
+    /* Full-screen popup */
+    .overlay{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.9);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .popup{
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        text-align:center;
+        width:400px;
+    }
+
+    .popup h1{
+        color:red;
+        margin-bottom:20px;
+    }
+
+    button{
+        padding:10px 20px;
+        margin:10px;
+        font-size:16px;
+        cursor:pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Content shown after OK -->
+<div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>This page appears after clicking OK.</p>
+</div>
+
+<!-- Full-screen message -->
+<div class="overlay" id="popupBox">
+    <div class="popup">
+        <h1>YOU ARE HACKED</h1>
+        <p>This is a demonstration page.</p>
+
+        <button onclick="closePopup()">OK</button>
+        <button onclick="exitPage()">Exit</button>
+    </div>
+</div>
+
+<script>
+function closePopup() {
+    document.getElementById("popupBox").style.display = "none";
+}
+
+function exitPage() {
+    document.body.innerHTML = `
+        <div style="text-align:center; margin-top:200px; font-family:Arial;">
+            <h1>Session Ended</h1>
+            <p>Click Back to Return</p>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
