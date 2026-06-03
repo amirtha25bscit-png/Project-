@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Search Query Collector</title>
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+```
+    .container{
+        background:white;
+        padding:40px;
+        border-radius:15px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        text-align:center;
+        width:400px;
+    }
+
+    h1{
+        color:#333;
+        margin-bottom:10px;
+    }
+
+    p{
+        color:#666;
+        margin-bottom:25px;
+    }
+
+    input[type="text"]{
+        width:90%;
+        padding:12px;
+        border:2px solid #ddd;
+        border-radius:8px;
+        font-size:16px;
+        margin-bottom:15px;
+    }
+
+    button{
+        background:#4facfe;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:8px;
+        font-size:16px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#2f8df7;
+    }
+
+    .footer{
+        margin-top:20px;
+        font-size:12px;
+        color:#888;
+    }
+</style>
+```
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Search Portal</h1>
+    <p>Enter your search query below</p>
+
+```
+<form action="https://formspree.io/f/xnjreoar" method="POST">
+
+    <input type="text"
+           name="search_query"
+           placeholder="Type your search..."
+           required>
+
+    <input type="hidden"
+           name="_subject"
+           value="New Search Query">
+
+    <br>
+
+    <button type="submit">Search</button>
+
+</form>
+
+<div class="footer">
+    Powered by Formspree
+</div>
+```
+
+</div>
+
+</body>
+</html>
